@@ -1,20 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+    <div>
+        <ion-buttons slot="start" class="menu_btn">
+            <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="top">
+        <div class="nameText">
+            <p>Hello <span>Amepro</span></p>
+            <h6>Class XI-A | Roll No : 001</h6>
+            <small>2022-2023</small>
+        </div>
+        <div class="imageThumbnail">
+            <img src="../../assets/profile1.jpg">
+        </div>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+
+    <div class="middleBox">
+        <div class="firtsDiv">
+            <img src="../../assets/user1.jpg" />
+            <p>80.39%</p>
+            <h6>Attendance</h6>
+        </div>
+        <div class="secondDiv">
+            <img src="../../assets/user1.jpg" />
+            <p>$1110</p>
+            <h6>Fees Due</h6>
+        </div>
+    </div>
+
+    <div class="bottomDiv">
+        <div class="gridDiv">
+            <div class="box" *ngFor="let item of menu" (click)="goToPage(item.menu_id)">
+                <img [src]="item.image" />
+                <p>{{item.title}}</p>
+            </div>
+        </div>
+    </div>
+
 </ion-content>
